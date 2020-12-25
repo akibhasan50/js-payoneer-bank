@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <title>Pioneer-Bank</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -10,7 +11,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
-  <body>
+
+<body>
 
     <div id="login-area" class="container">
         <h1 class="text-center mt-5">Welcome to pioneer Bank</h1>
@@ -20,86 +22,243 @@
                 <h4>Login</h4>
 
                 <div class="form-group">
-                  <label for="">Email</label>
-                  <input type="email"
-                    class="form-control" name="" id="" aria-describedby="helpId" placeholder="Email">
-                  
+                    <label for="">Email</label>
+                    <input type="email" class="form-control" name="" id="email" aria-describedby="helpId" placeholder="Email">
+
                 </div>
-        
+
                 <div class="form-group">
-                  <label for="">Password</label>
-                  <input type="password" class="form-control" name="" id="" placeholder="Password">
+                    <label for="">Password</label>
+                    <input type="password" class="form-control" name="" id="password" placeholder="Password">
                 </div>
-        
+
                 <button id="login" type="submit" class="btn btn-primary">Enter</button>
 
             </div>
 
-          
+
         </div>
 
 
 
     </div>
     <div id="transaction-area" class="container ">
-        <h1 class="text-center mt-5">Transaction Area</h1>
-       <div class="row text-light text-center">
-         <div class="col-lg-4 ">
-           <div class="card bg-danger">
-             <img class="card-img-top" src="holder.js/100x180/" alt="">
-             <div class="card-body">
-               <h4 class="card-title">Title</h4>
-               <p class="card-text">Text</p>
-             </div>
-           </div>
-         </div>
-         <div class="col-lg-4 ">
-          <div class="card bg-info">
-            <img class="card-img-top" src="holder.js/100x180/" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Title</h4>
-              <p class="card-text">Text</p>
+        <h1 class="text-center my-5">Transaction Area</h1>
+        <div class="row text-light">
+            <div class="col-lg-4 ">
+                <div class="card bg-danger diposite">
+
+                    <div class="card-body">
+                        <h4 class="card-title">Deposite</h4>
+                        <h1 class="card-text">$ <span id="currentDeposite"> 00</span></h1>
+                    </div>
+                </div>
             </div>
-          </div>
-         </div>
-         <div class="col-lg-4 ">
-          <div class="card bg-warning">
-            <img class="card-img-top" src="holder.js/100x180/" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Title</h4>
-              <p class="card-text">Text</p>
+            <div class="col-lg-4 ">
+                <div class="card bg-info withdraw">
+
+                    <div class="card-body">
+                        <h4 class="card-title"> Withdraw</h4>
+                        <h1 class="card-text">$ <span id="currentWithdraw"> 00</span></h1>
+                    </div>
+                </div>
             </div>
-          </div>
-         </div>
-        
-       </div>
+            <div class="col-lg-4 ">
+                <div class="card bg-warning balance">
+
+                    <div class="card-body">
+                        <h4 class="card-title"> Balance</h4>
+                        <h1 class="card-text">$ <span id="currentBalance"> 1200</span></h1>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row my-4">
+            <div class="col-lg-6">
+                <div class="card shadow-lg">
+
+                    <div class="card-body">
+                        <h4 class="card-title">Deposite</h4>
+                        <div class="form-group">
+
+                            <input type="text" class="form-control" name="" id="depositeAmount" aria-describedby="helpId" placeholder="Amount your want to Deposite ">
+
+                        </div>
+                        <button id="addDeposite" type="submit" class="btn btn-primary">Deposite</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card shadow-lg">
+
+                    <div class="card-body">
+                        <h4 class="card-title">Withdraw</h4>
+                        <div class="form-group">
+
+                            <input type="text" class="form-control" name="" id="withdrawAmount" aria-describedby="helpId" placeholder="Amount your want to withdraw ">
+
+                        </div>
+                        <button id="subWithdraw" type="submit" class="btn btn-primary">Withdraw</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <a name="" id="logout" class="btn btn-primary" role="button">Log Out</a>
+        </div>
+
 
 
 
     </div>
-   
 
 
-      
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  
+
 
     <script>
-
+        //login button event
         var logBtn = document.getElementById("login");
+        var logOutBtn = document.getElementById("logout");
 
-        logBtn.addEventListener('click',function(){
+        //check cookie 
+        if (getCookie("logedIn") == "true") {
             var loginArea = document.getElementById("login-area")
-            loginArea.style.display ="none"
+            loginArea.style.display = "none"
             var transArea = document.getElementById("transaction-area")
-            transArea.style.display ="block"
+            transArea.style.display = "block"
+        }
+        logBtn.addEventListener('click', function() {
+
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            if (email == "akib@akib.com" && password == "1234") {
+                var loginArea = document.getElementById("login-area")
+                loginArea.style.display = "none"
+                var transArea = document.getElementById("transaction-area")
+                transArea.style.display = "block"
+
+                setCookie("logedIn", "true", 30)
+            } else {
+                alert("password or email isn't correct");
+                return;
+            }
+
 
         })
+
+        logOutBtn.addEventListener('click', function() {
+
+            setCookie("logedIn", "false", 30);
+            var loginArea = document.getElementById("login-area")
+            loginArea.style.display = "block"
+            var transArea = document.getElementById("transaction-area")
+            transArea.style.display = "none"
+
+
+
+        })
+
+        //set cookie
+
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        //get cookie
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        //deposite button event
+
+        var depositBtn = document.getElementById("addDeposite");
+
+        function getValue(value) {
+            const amount = document.getElementById(value).value;
+            const number = parseFloat(amount);
+            return number;
+        }
+
+        function getTextValue(value) {
+            const txtAmount = document.getElementById(value).innerText;
+            const txtNumber = parseFloat(txtAmount);
+            return txtNumber;
+        }
+
+        depositBtn.addEventListener('click', function(event) {
+            updateBalance("currentDeposite", getValue("depositeAmount"));
+            updateBalance("currentBalance", getValue("depositeAmount"));
+            document.getElementById("depositeAmount").value = "";
+        })
+
+        var withdrawBtn = document.getElementById("subWithdraw");
+
+        withdrawBtn.addEventListener('click', function(event) {
+            //add withdraw 
+            var withdraw = getTextValue("currentWithdraw");
+            var currentWithdraw = getValue("withdrawAmount");
+
+
+            const totalWithdraw = withdraw + currentWithdraw;
+            document.getElementById("currentWithdraw").innerText = totalWithdraw;
+            document.getElementById("withdrawAmount").value = "";
+
+
+            //subtract from total
+
+
+            var curBalance = getTextValue("currentBalance");
+
+
+            const balanceAfterWithdraw = curBalance - currentWithdraw;
+
+            document.getElementById("currentBalance").innerText = balanceAfterWithdraw;
+
+
+
+
+
+        })
+
+
+
+
+
+        function updateBalance(id, depositeNumber) {
+            const current = document.getElementById(id).innerText;
+            const currentNumber = parseFloat(current);
+
+            const total = depositeNumber + currentNumber;
+            document.getElementById(id).innerText = total;
+        }
     </script>
 
 </body>
+
 </html>
